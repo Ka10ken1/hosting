@@ -44,8 +44,6 @@ Thumbs.db
 
 # === Yew/WebAssembly ===
 /pkg/
-/dist/
-!/dist/CV.pdf
 /node_modules/
 /.yarn/
 /yarn.lock
