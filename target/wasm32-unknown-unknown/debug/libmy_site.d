@@ -1,1 +1,0 @@
-/home/achir/rust/hosting/target/wasm32-unknown-unknown/debug/libmy_site.rlib: /home/achir/rust/hosting/src/components/body.rs /home/achir/rust/hosting/src/components/footer.rs /home/achir/rust/hosting/src/components/header.rs /home/achir/rust/hosting/src/components/mod.rs /home/achir/rust/hosting/src/components/page.rs /home/achir/rust/hosting/src/lib.rs

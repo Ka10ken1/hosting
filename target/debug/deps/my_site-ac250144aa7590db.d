@@ -1,5 +1,0 @@
-/home/achir/rust/my-site/target/debug/deps/my_site-ac250144aa7590db: src/main.rs
-
-/home/achir/rust/my-site/target/debug/deps/my_site-ac250144aa7590db.d: src/main.rs
-
-src/main.rs:
