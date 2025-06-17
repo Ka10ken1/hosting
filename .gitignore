@@ -1,0 +1,59 @@
+# === Rust build artifacts ===
+/target/
+**/*.rs.bk
+
+# === Cargo package manager ===
+/Cargo.lock
+/.cargo/
+/.cargo-config.toml
+.cargo/
+
+# === IDEs and editors ===
+# VSCode
+.vscode/
+/.vscode-test/
+
+# IntelliJ
+.idea/
+/*.iml
+
+# Sublime
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+
+# === OS junk ===
+.DS_Store
+Thumbs.db
+
+# === Logs and dumps ===
+*.log
+*.tmp
+*.bak
+
+# === By-products of tests or tooling ===
+/coverage/
+/htmlcov/
+/*.profraw
+*.gcno
+*.gcda
+*.gcov
+
+# === Yew/WebAssembly ===
+/pkg/
+/dist/
+/node_modules/
+/.yarn/
+/yarn.lock
+package-lock.json
+*.wasm
+*.js
+*.ts
+*.d.ts
+
+# === Misc ===
+*.lock
+
