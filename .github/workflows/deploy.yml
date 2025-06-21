@@ -1,60 +1,32 @@
-name: Deploy to GitHub Pages
-
+name: Build and Deploy
 on:
   push:
     branches: [ main ]
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    
     steps:
     - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Setup Rust
-      uses: dtolnay/rust-toolchain@stable
+      uses: actions/checkout@v3
+
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
       with:
-        targets: wasm32-unknown-unknown
-        
-    - name: Cache cargo dependencies
-      uses: actions/cache@v3
-      with:
-        path: |
-          ~/.cargo/bin/
-          ~/.cargo/registry/index/
-          ~/.cargo/registry/cache/
-          ~/.cargo/git/db/
-          target/
-        key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
-        
+        toolchain: stable
+        target: wasm32-unknown-unknown
+
     - name: Install Trunk
-      run: |
-        wget -qO- https://github.com/trunk-rs/trunk/releases/latest/download/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf-
-        sudo mv trunk /usr/local/bin/
-        
-    - name: Build project
-      run: trunk build --release --public-url /${{ github.event.repository.name }}/
-      
-    - name: Copy CV file
-      run: cp static/CV.pdf dist/CV.pdf
-      
-    - name: Setup Pages
-      uses: actions/configure-pages@v4
-      
-    - name: Upload Pages artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: jetli/trunk-action@v0.4.0
       with:
-        path: dist
-        
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+        version: 'latest'
+
+    - name: Build
+      run: trunk build --release
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
+      if: github.ref == 'refs/heads/main'
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
