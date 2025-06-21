@@ -26,18 +26,8 @@ pub fn body(props: &BodyProps) -> Html {
         )
     };
 
-    // Define the skill_item closure outside the html! macro
-    let skill_item = |label: &str, svg: Html| {
-        html! {
-            <li style="display: flex; align-items: center; gap: 8px; font-weight: 600; color: #00ff88;">
-                { svg }
-                <span>{ label }</span>
-            </li>
-        }
-    };
-
     html!(
-        <main style={format!("
+    <main style={format!("
             position: relative;
             max-width: 1400px; 
             margin: auto; 
@@ -49,8 +39,8 @@ pub fn body(props: &BodyProps) -> Html {
             overflow: hidden;
             ", bg_gradient, text_color)}>
 
-            // Decorative elements
-            <div style="
+        // Decorative elements
+        <div style="
                 position: absolute;
                 top: 10%;
                 left: -10%;
@@ -61,7 +51,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: float 6s ease-in-out infinite;
                 "></div>
 
-            <div style="
+        <div style="
                 position: absolute;
                 top: 60%;
                 right: -15%;
@@ -72,7 +62,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: float 8s ease-in-out infinite reverse;
                 "></div>
 
-            <div style="
+        <div style="
                 position: absolute;
                 top: 30%;
                 left: 5%;
@@ -82,7 +72,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: pulse 4s ease-in-out infinite;
                 "></div>
 
-            <div style="
+        <div style="
                 position: absolute;
                 top: 70%;
                 right: 8%;
@@ -92,8 +82,8 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: pulse 3s ease-in-out infinite;
                 "></div>
 
-            // Geometric shapes
-            <div style="
+        // Geometric shapes
+        <div style="
                 position: absolute;
                 top: 20%;
                 left: 2%;
@@ -104,7 +94,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: rotate 10s linear infinite;
                 "></div>
 
-            <div style="
+        <div style="
                 position: absolute;
                 top: 80%;
                 right: 3%;
@@ -115,7 +105,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: pulse 5s ease-in-out infinite;
                 "></div>
 
-            <div style="
+        <div style="
                 position: absolute;
                 top: 45%;
                 left: 1%;
@@ -127,8 +117,8 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: float 7s ease-in-out infinite;
                 "></div>
 
-            // Side decoration panels
-            <div style="
+        // Side decoration panels
+        <div style="
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -141,7 +131,7 @@ pub fn body(props: &BodyProps) -> Html {
                 pointer-events: none;
                 "></div>
 
-            <div style="
+        <div style="
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -154,8 +144,8 @@ pub fn body(props: &BodyProps) -> Html {
                 pointer-events: none;
                 "></div>
 
-            // Main content container
-            <div style={format!("
+        // Main content container
+        <div style={format!("
                 position: relative;
                 z-index: 10;
                 max-width: 900px;
@@ -168,188 +158,227 @@ pub fn body(props: &BodyProps) -> Html {
                 border: 1px solid {};
                 ", card_bg, border_color)}>
 
-                // Profile Section - Home
-                <section id="home" style="text-align: center; margin-bottom: 3rem; scroll-margin-top: 100px;">
-                    <div style="position: relative; display: inline-block; margin-bottom: 2rem;">
-                        <img
-                            src="https://avatars.githubusercontent.com/u/583231?v=4"
-                            alt="Profile picture"
-                            style="
-                                width: 180px; 
-                                height: 180px; 
-                                border-radius: 50%; 
-                                border: 5px solid rgba(255, 255, 255, 0.3);
-                                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-                                "
-                        />
-                        <div style="
-                                position: absolute;
-                                bottom: 10px;
-                                right: 10px;
-                                width: 25px;
-                                height: 25px;
-                                background: #00ff88;
-                                border-radius: 50%;
-                                border: 3px solid white;
-                                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-                                "></div>
-                    </div>
-                    <h1 style="
-                            font-size: 3.5rem; 
-                            margin: 0 0 1rem 0;
-                            background: linear-gradient(45deg, #fff, #f0f8ff);
-                            -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                            background-clip: text;
-                            font-weight: 700;
-                            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            // Profile Section - Home
+            <section id="home" style="text-align: center; margin-bottom: 3rem; scroll-margin-top: 100px;">
+                <div style="position: relative; display: inline-block; margin-bottom: 2rem;">
+                    <img
+                        src="https://avatars.githubusercontent.com/u/583231?v=4"
+                        alt="Profile picture"
+                        style="
+                            width: 180px; 
+                            height: 180px; 
+                            border-radius: 50%; 
+                            border: 5px solid rgba(255, 255, 255, 0.3);
+                            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                            "
+                    />
+                    <div style="
+                            position: absolute;
+                            bottom: 10px;
+                            right: 10px;
+                            width: 25px;
+                            height: 25px;
+                            background: #00ff88;
+                            border-radius: 50%;
+                            border: 3px solid white;
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+                            "></div>
+                </div>
+                <h1 style="
+                        font-size: 3.5rem; 
+                        margin: 0 0 1rem 0;
+                        background: linear-gradient(45deg, #fff, #f0f8ff);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        font-weight: 700;
+                        text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                        ">
+                    { "Mate Kopaliani" }
+                </h1>
+                <p style="
+                        color: rgba(255, 255, 255, 0.9);
+                        font-size: 1.2rem;
+                        margin-bottom: 2rem;
+                        line-height: 1.6;
+                        font-weight: 300;
+                        ">
+                    { "Rustacean 🦀 | Arch user btw 🐧 | Hardware Whisperer ⚡ | Math Enthusiast ∑" }
+                </p>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://github.com/Ka10ken1" target="_blank" rel="noopener noreferrer" style="
+                            padding: 12px 24px;
+                            background: rgba(255, 255, 255, 0.2);
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+                            border-radius: 25px;
+                            text-decoration: none;
+                            color: white;
+                            font-weight: 500;
+                            backdrop-filter: blur(5px);
+                            transition: all 0.3s ease;
                             ">
-                        { "Mate Kopaliani" }
-                    </h1>
-                    <p style="
-                            color: rgba(255, 255, 255, 0.9);
-                            font-size: 1.2rem;
-                            margin-bottom: 2rem;
-                            line-height: 1.6;
-                            font-weight: 300;
+                        { "🐙 GitHub" }
+                    </a>
+                    <a href="mailto:matekopaliani12@gmail.com" style="
+                            padding: 12px 24px;
+                            background: rgba(255, 255, 255, 0.2);
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+                            border-radius: 25px;
+                            text-decoration: none;
+                            color: white;
+                            font-weight: 500;
+                            backdrop-filter: blur(5px);
+                            transition: all 0.3s ease;
                             ">
-                        { "Rustacean 🦀 | Arch user btw 🐧 | Hardware Whisperer ⚡ | Math Enthusiast ∑" }
+                        { "📧 Email" }
+                    </a>
+                    <a href="https://www.linkedin.com/in/mate-kopaliani-8838a7277/" target="_blank" rel="noopener noreferrer" style="
+                            padding: 12px 24px;
+                            background: rgba(255, 255, 255, 0.2);
+                            border: 1px solid rgba(255, 255, 255, 0.3);
+                            border-radius: 25px;
+                            text-decoration: none;
+                            color: white;
+                            font-weight: 500;
+                            backdrop-filter: blur(5px);
+                            transition: all 0.3s ease;
+                            ">
+                        { "🔗 LinkedIn" }
+                    </a>
+                    // Download CV Button
+                    <a href="./static/CV.pdf" download="Mate_Kopaliani_CV.pdf" target="_blank" rel="noopener noreferrer" style="
+                            padding: 12px 24px;
+                            background: linear-gradient(45deg, #00ff88, #00cc70);
+                            border: 1px solid rgba(0, 255, 136, 0.5);
+                            border-radius: 25px;
+                            text-decoration: none;
+                            color: white;
+                            font-weight: 600;
+                            backdrop-filter: blur(5px);
+                            transition: all 0.3s ease;
+                            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
+                            ">
+                        { "📄 Download CV" }
+                    </a>
+                </div>
+            </section>
+
+            { section_with_id(String::from("education"), "Education", html! {
+            <ul style="list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 1rem;">
+                    <strong>{ "B.Sc. in Computer Science — Kutaisi International University (2022 - now)" }</strong>
+                    <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
+                        { "Currently pursuing a degree in Computer Science with a minor in Mathematics." }
                     </p>
-                    <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                        <a href="https://github.com/Ka10ken1" target="_blank" rel="noopener noreferrer" style="
-                                padding: 12px 24px;
-                                background: rgba(255, 255, 255, 0.2);
-                                border: 1px solid rgba(255, 255, 255, 0.3);
-                                border-radius: 25px;
-                                text-decoration: none;
-                                color: white;
-                                font-weight: 500;
-                                backdrop-filter: blur(5px);
-                                transition: all 0.3s ease;
-                                ">
-                            { "🐙 GitHub" }
+                </li>
+            </ul>
+            }, *dark_mode)}
+
+            { section_with_id(String::from("experience"), "Experience", html! {
+            // i want gaps between the list items
+            <ul style="list-style: none; padding-left: 0; padding-bottom: 1rem;">
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>{ "Student Tutor of Linear Algebra " }</strong>
+                    <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
+                        { "I was student tutor of Linear Algebra at Kutaisi International Univerisity Where i helped my peer's with the subject" }
+                    </p>
+                </li>
+
+                <li style="margin-bottom: 0.5rem;">
+                    <strong>
+                        { "Software Engineer Intern — " }
+                        <a href="https://suliko.ge" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: #1a73e8;">
+                            {"SULIKO.GE"}
                         </a>
-                        <a href="mailto:matekopaliani12@gmail.com" style="
-                                padding: 12px 24px;
-                                background: rgba(255, 255, 255, 0.2);
-                                border: 1px solid rgba(255, 255, 255, 0.3);
-                                border-radius: 25px;
-                                text-decoration: none;
-                                color: white;
-                                font-weight: 500;
-                                backdrop-filter: blur(5px);
-                                transition: all 0.3s ease;
-                                ">
-                            { "📧 Email" }
-                        </a>
-                        <a href="https://www.linkedin.com/in/mate-kopaliani-8838a7277/" target="_blank" rel="noopener noreferrer" style="
-                                padding: 12px 24px;
-                                background: rgba(255, 255, 255, 0.2);
-                                border: 1px solid rgba(255, 255, 255, 0.3);
-                                border-radius: 25px;
-                                text-decoration: none;
-                                color: white;
-                                font-weight: 500;
-                                backdrop-filter: blur(5px);
-                                transition: all 0.3s ease;
-                                ">
-                            { "🔗 LinkedIn" }
-                        </a>
-                        // Download CV Button
-                        <a href="/CV.pdf" download="Mate_Kopaliani_CV.pdf" target="_blank" rel="noopener noreferrer" style="
-                                padding: 12px 24px;
-                                background: linear-gradient(45deg, #00ff88, #00cc70);
-                                border: 1px solid rgba(0, 255, 136, 0.5);
-                                border-radius: 25px;
-                                text-decoration: none;
-                                color: white;
-                                font-weight: 600;
-                                backdrop-filter: blur(5px);
-                                transition: all 0.3s ease;
-                                box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
-                                ">
-                            { "📄 Download CV" }
-                        </a>
-                    </div>
-                </section>
+                        { " (Spring 2025)" }
+                    </strong>
+                    <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
+                        { "Worked as a back-end .NET developer focused on building an OCR product using microservices architecture,
+                        with additional responsibilities as a Prompt Engineer. Along with regular back-end stuff" }
+                    </p>
+                </li>
+            </ul>
+            }, *dark_mode)}
 
-                { section_with_id(String::from("education"), "Education", html! {
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 1rem;">
-                            <strong>{ "B.Sc. in Computer Science — Kutaisi International University (2022 - now)" }</strong>
-                            <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                                { "Currently pursuing a degree in Computer Science with a minor in Mathematics." }
-                            </p>
-                        </li>
-                    </ul>
-                }, *dark_mode)}
+            { section_with_id(String::from("projects"), "Projects", html! {
+            <ul style="list-style: none; padding-left: 0;">
 
-                { section_with_id(String::from("experience"), "Experience", html! {
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li>
-                            <strong>{ "Bachelor Thesis — Floating Point Unit Design (2026)" }</strong>
-                            <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                                { "Designed and implemented a pipelined IEEE 754-compliant Floating Point Unit (FPU) in Verilog. Developed a custom Rust-based testbench for functional verification and performance evaluation." }
-                            </p>
-                        </li>
 
-                        <li>
-                            <strong>{ "Software Engineer Intern — SULIKO (Spring 2025)" }</strong>
-                            <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                                { "Worked as a back-end .NET developer focused on building an OCR product using microservices architecture, with additional responsibilities as a Prompt Engineer." }
-                            </p>
-                        </li>
-                    </ul>
-                }, *dark_mode)}
+                <li style="margin-bottom: 1rem;">
+                    <a href="https://github.com/Ka10ken1/FloatingPointUnit" target="_blank" rel="noopener noreferrer" style="
+                            color: #00ff88;
+                            font-weight: 600;
+                            text-decoration: none;
+                            ">
+                        { "FloatingPointUnit" }
+                    </a>
+                    <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
+                        { "IEEE-754 Standart Compilient Floating Point Unit design implemented in Systemverilog" }
+                    </p>
+                </li>
 
-                { section_with_id(String::from("projects"), "Projects", html! {
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li style="margin-bottom: 1rem;">
-                            <a href="https://ka10ken1.github.io/edge-detection/" target="_blank" rel="noopener noreferrer" style="
-                                    color: #00ff88;
-                                    font-weight: 600;
-                                    text-decoration: none;
-                                    ">
-                                { "Edge Detection Analysis" }
-                            </a>
-                            <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                                { "A Rust-based CLI tool to make your life easier. Handles tasks automatically so you don't have to." }
-                            </p>
-                        </li>
-                        <li>
-                            <a href="https://github.com/Ka10ken1/full-stack-library" target="_blank" rel="noopener noreferrer" style="
-                                    color: #00ff88;
-                                    font-weight: 600;
-                                    text-decoration: none;
-                                    ">
-                                { "Full Stack Library Project" }
-                            </a>
-                            <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                                { "A path planning system for autonomous duckiebots with obstacle avoidance." }
-                            </p>
-                        </li>
-                    </ul>
-                }, *dark_mode)}
+                <li style="margin-bottom: 1rem;">
+                    <a href="https://github.com/Ka10ken1/NP-final" target="_blank" rel="noopener noreferrer" style="
+                        color: #00ff88;
+                        font-weight: 600;
+                        text-decoration: none;
+                        ">
+                        {"Numerical Methods for Solving Sturm–Liouville Problems"}
+                    </a>
+                    <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
+                        { "Analysis of Sturm-Lioville Problem and Numerical Solutions of Differential Equations" }
+                    </p>
+                </li>
 
-                { section_with_id(String::from("technologies"), "Technologies & Tools", html! {
-                    <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 0;">
-                        <img
-                            src="https://skillicons.dev/icons?i=rust,java,python,cpp,javascript,typescript,lua,mysql,postgres,linux,docker,git,latex"
-                            alt="Technologies and Tools"
-                            style="
-                                max-width: 100%;
-                                height: auto;
-                                border-radius: 10px;
-                                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                                "
-                        />
-                    </div>
-                }, *dark_mode)}
 
+                <li style="margin-bottom: 1rem;">
+                    <a href="https://ka10ken1.github.io/edge-detection/" target="_blank" rel="noopener noreferrer" style="
+                            color: #00ff88;
+                            font-weight: 600;
+                            text-decoration: none;
+                            ">
+                        { "Edge Detection Analysis" }
+                    </a>
+                    <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
+                        { "Analysis of Edge detection algorithms with respect to accuracy and computational efficiency" }
+                    </p>
+                </li>
+
+                <li style="margin-bottom: 1rem;">
+                    <a href="https://github.com/Ka10ken1/full-stack-library" target="_blank" rel="noopener noreferrer" style="
+                            color: #00ff88;
+                            font-weight: 600;
+                            text-decoration: none;
+                            ">
+                        { "Full Stack Library Project" }
+                    </a>
+                    <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
+                        { "full-stack-library implenetation with React+Spring Boot" }
+                    </p>
+                </li>
+
+            </ul>
+            }, *dark_mode)}
+
+            { section_with_id(String::from("technologies"), "Technologies & Tools", html! {
+            <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 0;">
+                <img
+                    src="https://skillicons.dev/icons?i=rust,java,python,cpp,javascript,typescript,lua,mysql,postgres,linux,docker,git,latex"
+                    alt="Technologies and Tools"
+                    style="
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 10px;
+                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+                        "
+                />
             </div>
+            }, *dark_mode)}
 
-            <style>
-            {r#"
+        </div>
+
+        <style>
+        {r#"
                 @keyframes float {
                 0%, 100% { transform: translateY(0px); }
                 50% { transform: translateY(-20px); }
@@ -374,8 +403,8 @@ pub fn body(props: &BodyProps) -> Html {
                 scroll-behavior: smooth;
                 }
                 "#}
-            </style>
-        </main>
+        </style>
+    </main>
     )
 }
 
@@ -387,13 +416,13 @@ fn section_with_id(id: String, title: &str, content: Html, dark_mode: bool) -> H
     };
 
     html! {
-        <section id={id} style={format!("
+    <section id={id} style={format!("
             margin-bottom: 3rem;
             padding-bottom: 1.5rem;
             border-bottom: 1px solid {};
             scroll-margin-top: 100px;
             ", border_color)}>
-            <h2 style="
+        <h2 style="
                 font-size: 2rem;
                 font-weight: 700;
                 margin-bottom: 1rem;
@@ -402,9 +431,9 @@ fn section_with_id(id: String, title: &str, content: Html, dark_mode: bool) -> H
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
                 ">
-                { title }
-            </h2>
-            { content }
-        </section>
+            { title }
+        </h2>
+        { content }
+    </section>
     }
 }
