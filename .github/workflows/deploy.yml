@@ -44,6 +44,9 @@ jobs:
     - name: Build project
       run: trunk build --release --public-url /${{ github.event.repository.name }}/
       
+    - name: Copy CV file
+      run: cp static/CV.pdf dist/CV.pdf
+      
     - name: Setup Pages
       uses: actions/configure-pages@v4
       
