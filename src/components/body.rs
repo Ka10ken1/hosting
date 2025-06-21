@@ -246,20 +246,6 @@ pub fn body(props: &BodyProps) -> Html {
                         { "🔗 LinkedIn" }
                     </a>
                     // Download CV Button
-                    <a href="./CV.pdf" download="Mate_Kopaliani_CV.pdf" target="_blank" rel="noopener noreferrer" style="
-                            padding: 12px 24px;
-                            background: linear-gradient(45deg, #00ff88, #00cc70);
-                            border: 1px solid rgba(0, 255, 136, 0.5);
-                            border-radius: 25px;
-                            text-decoration: none;
-                            color: white;
-                            font-weight: 600;
-                            backdrop-filter: blur(5px);
-                            transition: all 0.3s ease;
-                            box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
-                            ">
-                        { "📄 Download CV" }
-                    </a>
                 </div>
             </section>
 
