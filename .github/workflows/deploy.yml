@@ -19,9 +19,7 @@ jobs:
           target: wasm32-unknown-unknown
 
       - name: Install Trunk
-        run: |
-          curl -sSf https://trunkrs.dev/install.sh | bash -s -- -y
-          echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        run: cargo install --locked trunk
 
       - name: Build
         run: trunk build --release --public-url /hosting/
