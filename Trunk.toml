@@ -1,3 +1,10 @@
+[build]
+dist = "dist"
+
 [serve]
 static = ["static"]
+
+[[copy]]
+from = "static/CV.pdf"
+to = "CV.pdf"
 
