@@ -203,7 +203,7 @@ pub fn body(props: &BodyProps) -> Html {
                         line-height: 1.6;
                         font-weight: 300;
                         ">
-                    { "Rustacean 🦀 | Hardware Engineer 🔧 | FPGA Developer ⚡ | Math Enthusiast ∑" }
+                    { "Rustacean 🦀 | Hardware Whisperer 🔧 | Software Lover ⚡ | Math Enthusiast ∑" }
                 </p>
                 <div class="button-container" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
                     <a href="https://github.com/Ka10ken1" target="_blank" rel="noopener noreferrer" class="action-button" style="
@@ -298,7 +298,7 @@ pub fn body(props: &BodyProps) -> Html {
                         { "IEEE-754 Floating Point Unit" }
                     </a>
                     <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                        { "Complete IEEE-754 compliant FPU supporting both single (32-bit) and double (64-bit) precision arithmetic. 
+                        { "Complete IEEE-754 compliant FPU supporting both single (32-bit) and double (64-bit) precision arithmetic.
                           Implements addition, subtraction, multiplication, and division operations with proper exception handling 
                           and rounding modes. SystemVerilog implementation optimized for FPGA synthesis." }
                     </p>
@@ -313,7 +313,7 @@ pub fn body(props: &BodyProps) -> Html {
                         {"Numerical Methods for Sturm–Liouville Problems"}
                     </a>
                     <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                        { "Implementation and comparative analysis of numerical methods for solving eigenvalue problems in Sturm-Liouville 
+                        { "Implementation and comparative analysis of numerical methods for solving eigenvalue problems in Sturm-Liouville
                           differential equations. Includes finite difference, shooting method, and spectral approaches with convergence 
                           analysis and error estimation for boundary value problems in mathematical physics." }
                     </p>
@@ -329,7 +329,7 @@ pub fn body(props: &BodyProps) -> Html {
                         { "Edge Detection Algorithm Analysis" }
                     </a>
                     <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                        { "Comprehensive comparative study of edge detection algorithms including Sobel, Canny, Prewitt, and Laplacian operators. 
+                        { "Comprehensive comparative study of edge detection algorithms including Sobel, Canny, Prewitt, and Laplacian operators.
                           Features performance benchmarking across different image types, noise conditions, and computational complexity analysis. 
                           Interactive web-based visualization with real-time parameter tuning and quality metrics evaluation." }
                     </p>
