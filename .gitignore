@@ -48,10 +48,17 @@ Thumbs.db
 /.yarn/
 /yarn.lock
 package-lock.json
-*.wasm
-*.js
 *.ts
 *.d.ts
+
+# Ignore all .js and .wasm except in dist/
+*.js
+*.wasm
+
+# But not these
+!dist/*.js
+!dist/*.wasm
+
 
 # === Misc ===
 *.lock
