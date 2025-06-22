@@ -1,0 +1,219 @@
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+@keyframes rotate {
+    0% { transform: rotate(45deg); }
+    100% { transform: rotate(405deg); }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.4; }
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+a:hover {
+    transform: translateY(-2px) !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile Devices (320px - 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 1.5rem 1rem !important;
+    }
+    
+    .header-content {
+        flex-direction: column !important;
+        gap: 1rem !important;
+        align-items: center !important;
+    }
+    
+    .header-title {
+        font-size: 1.4rem !important;
+        text-align: center !important;
+    }
+    
+    .header-controls {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        align-items: center !important;
+    }
+    
+    .theme-button {
+        padding: 8px 12px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .status-indicator {
+        font-size: 0.8rem !important;
+        justify-content: center !important;
+    }
+    
+    .header-code {
+        display: none !important;
+    }
+    
+    main {
+        padding: 1.5rem 1rem !important;
+        margin: 0 !important;
+    }
+    
+    .main-container {
+        padding: 2rem 1.5rem !important;
+        border-radius: 15px !important;
+    }
+    
+    .profile-img {
+        width: 140px !important;
+        height: 140px !important;
+    }
+    
+    .main-title {
+        font-size: 2.5rem !important;
+        text-align: center !important;
+    }
+    
+    .subtitle {
+        font-size: 1rem !important;
+        text-align: center !important;
+    }
+    
+    .button-container {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        align-items: center !important;
+    }
+    
+    .action-button {
+        width: 100% !important;
+        max-width: 280px !important;
+        padding: 14px 20px !important;
+        font-size: 0.95rem !important;
+        text-align: center !important;
+    }
+    
+    .section-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .tech-icons {
+        max-width: 100% !important;
+        padding: 0.5rem !important;
+    }
+    
+    .decorative-element {
+        display: none !important;
+    }
+}
+
+/* Tablet Devices (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    main {
+        padding: 2.5rem 1.5rem !important;
+    }
+    
+    .main-container {
+        padding: 2.5rem !important;
+        max-width: 700px !important;
+    }
+    
+    .profile-img {
+        width: 160px !important;
+        height: 160px !important;
+    }
+    
+    .main-title {
+        font-size: 3rem !important;
+    }
+    
+    .subtitle {
+        font-size: 1.1rem !important;
+    }
+    
+    .button-container {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 0.8rem !important;
+    }
+    
+    .action-button {
+        flex: 1 1 calc(50% - 0.4rem) !important;
+        min-width: 140px !important;
+        max-width: 200px !important;
+        text-align: center !important;
+    }
+    
+    .section-title {
+        font-size: 1.75rem !important;
+    }
+    
+    .decorative-element {
+        opacity: 0.5 !important;
+    }
+}
+
+/* Small Mobile Devices (max 480px) */
+@media (max-width: 480px) {
+    .header-title {
+        font-size: 1.2rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .theme-button {
+        padding: 6px 10px !important;
+        font-size: 0.8rem !important;
+        gap: 4px !important;
+    }
+    
+    .status-indicator {
+        font-size: 0.75rem !important;
+    }
+    
+    /* Main content adjustments */
+    .profile-img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .main-title {
+        font-size: 2rem !important;
+        line-height: 1.2 !important;
+    }
+    
+    .subtitle {
+        font-size: 0.9rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .main-container {
+        padding: 1.5rem 1rem !important;
+        margin: 0.5rem !important;
+    }
+    
+    .action-button {
+        padding: 12px 16px !important;
+        font-size: 0.9rem !important;
+    }
+    
+    .section-title {
+        font-size: 1.3rem !important;
+    }
+} 

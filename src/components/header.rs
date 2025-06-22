@@ -45,7 +45,7 @@ pub fn header(props: &HeaderProps) -> Html {
             transition: all 0.3s ease;
         ", header_bg, border_color)}>
             // Code-themed decorative elements
-            <div style="
+            <div class="header-code" style="
                 position: absolute;
                 top: 20%;
                 left: 5%;
@@ -57,7 +57,7 @@ pub fn header(props: &HeaderProps) -> Html {
                 { "fn main() {" }
             </div>
 
-            <div style="
+            <div class="header-code" style="
                 position: absolute;
                 top: 60%;
                 right: 8%;
@@ -69,7 +69,7 @@ pub fn header(props: &HeaderProps) -> Html {
                 { "println!(\"Hello, Viwer!\");" }
             </div>
 
-            <div style="
+            <div class="header-code" style="
                 position: absolute;
                 top: 40%;
                 left: 10%;
@@ -81,7 +81,7 @@ pub fn header(props: &HeaderProps) -> Html {
                 { "}" }
             </div>
 
-            <div style="
+            <div class="header-content" style="
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -90,7 +90,7 @@ pub fn header(props: &HeaderProps) -> Html {
                 position: relative;
                 z-index: 1;
             ">
-                <h1 style="
+                <h1 class="header-title" style="
                     font-size: 1.8rem;
                     font-weight: 700;
                     margin: 0;
@@ -102,13 +102,14 @@ pub fn header(props: &HeaderProps) -> Html {
                     { "Welcome to My Lair" }
                 </h1>
 
-                <div style="
+                <div class="header-controls" style="
                     display: flex;
                     align-items: center;
                     gap: 20px;
                 ">
                     <button
                         onclick={on_toggle}
+                        class="theme-button"
                         style={format!("
                             background: {};
                             border: 2px solid rgba(255, 255, 255, 0.3);
@@ -129,7 +130,7 @@ pub fn header(props: &HeaderProps) -> Html {
                     </button>
 
                     // Status indicator
-                    <div style="
+                    <div class="status-indicator" style="
                         display: flex;
                         align-items: center;
                         gap: 8px;
@@ -148,19 +149,7 @@ pub fn header(props: &HeaderProps) -> Html {
                 </div>
             </div>
 
-            <style>
-                {r#"
-                    @keyframes fadeInOut {
-                        0%, 100% { opacity: 0.2; }
-                        50% { opacity: 0.4; }
-                    }
-                    
-                    button:hover {
-                        transform: translateY(-2px);
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                    }
-                "#}
-            </style>
+
         </header>
     }
 }

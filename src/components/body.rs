@@ -39,8 +39,7 @@ pub fn body(props: &BodyProps) -> Html {
             overflow: hidden;
             ", bg_gradient, text_color)}>
 
-        // Decorative elements
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 10%;
                 left: -10%;
@@ -51,7 +50,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: float 6s ease-in-out infinite;
                 "></div>
 
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 60%;
                 right: -15%;
@@ -62,7 +61,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: float 8s ease-in-out infinite reverse;
                 "></div>
 
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 30%;
                 left: 5%;
@@ -72,7 +71,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: pulse 4s ease-in-out infinite;
                 "></div>
 
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 70%;
                 right: 8%;
@@ -83,7 +82,7 @@ pub fn body(props: &BodyProps) -> Html {
                 "></div>
 
         // Geometric shapes
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 20%;
                 left: 2%;
@@ -94,7 +93,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: rotate 10s linear infinite;
                 "></div>
 
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 80%;
                 right: 3%;
@@ -105,7 +104,7 @@ pub fn body(props: &BodyProps) -> Html {
                 animation: pulse 5s ease-in-out infinite;
                 "></div>
 
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 45%;
                 left: 1%;
@@ -118,7 +117,7 @@ pub fn body(props: &BodyProps) -> Html {
                 "></div>
 
         // Side decoration panels
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -131,7 +130,7 @@ pub fn body(props: &BodyProps) -> Html {
                 pointer-events: none;
                 "></div>
 
-        <div style="
+        <div class="decorative-element" style="
                 position: absolute;
                 top: 0;
                 right: 0;
@@ -145,7 +144,7 @@ pub fn body(props: &BodyProps) -> Html {
                 "></div>
 
         // Main content container
-        <div style={format!("
+        <div class="main-container" style={format!("
                 position: relative;
                 z-index: 10;
                 max-width: 900px;
@@ -164,6 +163,7 @@ pub fn body(props: &BodyProps) -> Html {
                     <img
                         src="https://avatars.githubusercontent.com/u/583231?v=4"
                         alt="Profile picture"
+                        class="profile-img"
                         style="
                             width: 180px; 
                             height: 180px; 
@@ -184,7 +184,7 @@ pub fn body(props: &BodyProps) -> Html {
                             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
                             "></div>
                 </div>
-                <h1 style="
+                <h1 class="main-title" style="
                         font-size: 3.5rem; 
                         margin: 0 0 1rem 0;
                         background: linear-gradient(45deg, #fff, #f0f8ff);
@@ -196,17 +196,17 @@ pub fn body(props: &BodyProps) -> Html {
                         ">
                     { "Mate Kopaliani" }
                 </h1>
-                <p style="
+                <p class="subtitle" style="
                         color: rgba(255, 255, 255, 0.9);
                         font-size: 1.2rem;
                         margin-bottom: 2rem;
                         line-height: 1.6;
                         font-weight: 300;
                         ">
-                    { "Rustacean 🦀 | Arch user btw 🐧 | Hardware Whisperer ⚡ | Math Enthusiast ∑" }
+                    { "Rustacean 🦀 | Hardware Engineer 🔧 | FPGA Developer ⚡ | Math Enthusiast ∑" }
                 </p>
-                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                    <a href="https://github.com/Ka10ken1" target="_blank" rel="noopener noreferrer" style="
+                <div class="button-container" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="https://github.com/Ka10ken1" target="_blank" rel="noopener noreferrer" class="action-button" style="
                             padding: 12px 24px;
                             background: rgba(255, 255, 255, 0.2);
                             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -219,7 +219,7 @@ pub fn body(props: &BodyProps) -> Html {
                             ">
                         { "🐙 GitHub" }
                     </a>
-                    <a href="mailto:matekopaliani12@gmail.com" style="
+                    <a href="mailto:matekopaliani12@gmail.com" class="action-button" style="
                             padding: 12px 24px;
                             background: rgba(255, 255, 255, 0.2);
                             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -232,7 +232,7 @@ pub fn body(props: &BodyProps) -> Html {
                             ">
                         { "📧 Email" }
                     </a>
-                    <a href="https://www.linkedin.com/in/mate-kopaliani-8838a7277/" target="_blank" rel="noopener noreferrer" style="
+                    <a href="https://www.linkedin.com/in/mate-kopaliani-8838a7277/" target="_blank" rel="noopener noreferrer" class="action-button" style="
                             padding: 12px 24px;
                             background: rgba(255, 255, 255, 0.2);
                             border: 1px solid rgba(255, 255, 255, 0.3);
@@ -245,7 +245,6 @@ pub fn body(props: &BodyProps) -> Html {
                             ">
                         { "🔗 LinkedIn" }
                     </a>
-                    // Download CV Button
                 </div>
             </section>
 
@@ -296,10 +295,12 @@ pub fn body(props: &BodyProps) -> Html {
                             font-weight: 600;
                             text-decoration: none;
                             ">
-                        { "FloatingPointUnit" }
+                        { "IEEE-754 Floating Point Unit" }
                     </a>
                     <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                        { "IEEE-754 Standart Compilient Floating Point Unit design implemented in Systemverilog" }
+                        { "Complete IEEE-754 compliant FPU supporting both single (32-bit) and double (64-bit) precision arithmetic. 
+                          Implements addition, subtraction, multiplication, and division operations with proper exception handling 
+                          and rounding modes. SystemVerilog implementation optimized for FPGA synthesis." }
                     </p>
                 </li>
 
@@ -309,10 +310,12 @@ pub fn body(props: &BodyProps) -> Html {
                         font-weight: 600;
                         text-decoration: none;
                         ">
-                        {"Numerical Methods for Solving Sturm–Liouville Problems"}
+                        {"Numerical Methods for Sturm–Liouville Problems"}
                     </a>
                     <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                        { "Analysis of Sturm-Lioville Problem and Numerical Solutions of Differential Equations" }
+                        { "Implementation and comparative analysis of numerical methods for solving eigenvalue problems in Sturm-Liouville 
+                          differential equations. Includes finite difference, shooting method, and spectral approaches with convergence 
+                          analysis and error estimation for boundary value problems in mathematical physics." }
                     </p>
                 </li>
 
@@ -323,10 +326,12 @@ pub fn body(props: &BodyProps) -> Html {
                             font-weight: 600;
                             text-decoration: none;
                             ">
-                        { "Edge Detection Analysis" }
+                        { "Edge Detection Algorithm Analysis" }
                     </a>
                     <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                        { "Analysis of Edge detection algorithms with respect to accuracy and computational efficiency" }
+                        { "Comprehensive comparative study of edge detection algorithms including Sobel, Canny, Prewitt, and Laplacian operators. 
+                          Features performance benchmarking across different image types, noise conditions, and computational complexity analysis. 
+                          Interactive web-based visualization with real-time parameter tuning and quality metrics evaluation." }
                     </p>
                 </li>
 
@@ -336,10 +341,10 @@ pub fn body(props: &BodyProps) -> Html {
                             font-weight: 600;
                             text-decoration: none;
                             ">
-                        { "Full Stack Library Project" }
+                        { "Full Stack Library Management System" }
                     </a>
                     <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
-                        { "full-stack-library implenetation with React+Spring Boot" }
+                        { "Complete library management system with React frontend and Spring Boot backend featuring user authentication, book inventory, and loan tracking." }
                     </p>
                 </li>
 
@@ -351,6 +356,7 @@ pub fn body(props: &BodyProps) -> Html {
                 <img
                     src="https://skillicons.dev/icons?i=rust,java,python,cpp,javascript,typescript,lua,mysql,postgres,linux,docker,git,latex"
                     alt="Technologies and Tools"
+                    class="tech-icons"
                     style="
                         max-width: 100%;
                         height: auto;
@@ -363,33 +369,7 @@ pub fn body(props: &BodyProps) -> Html {
 
         </div>
 
-        <style>
-        {r#"
-                @keyframes float {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-20px); }
-                }
 
-                @keyframes pulse {
-                0%, 100% { opacity: 0.3; }
-                50% { opacity: 0.8; }
-                }
-
-                @keyframes rotate {
-                0% { transform: rotate(45deg); }
-                100% { transform: rotate(405deg); }
-                }
-
-                a:hover {
-                transform: translateY(-2px) !important;
-                background: rgba(255, 255, 255, 0.3) !important;
-                }
-
-                html {
-                scroll-behavior: smooth;
-                }
-                "#}
-        </style>
     </main>
     )
 }
@@ -408,7 +388,7 @@ fn section_with_id(id: String, title: &str, content: Html, dark_mode: bool) -> H
             border-bottom: 1px solid {};
             scroll-margin-top: 100px;
             ", border_color)}>
-        <h2 style="
+        <h2 class="section-title" style="
                 font-size: 2rem;
                 font-weight: 700;
                 margin-bottom: 1rem;
