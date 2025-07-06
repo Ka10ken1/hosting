@@ -305,6 +305,24 @@ pub fn body(props: &BodyProps) -> Html {
                 </li>
 
                 <li style="margin-bottom: 1rem;">
+                    <a href="https://github.com/Ka10ken1/Jobless-AI" target="_blank" rel="noopener noreferrer" style="
+                        color: #00ff88;
+                        font-weight: 600;
+                        text-decoration: none;
+                        ">
+                        { "Jobless-AI" }
+                    </a>
+                    <p style="margin: 0.3rem 0 0 0; font-weight: 300;">
+                        { "
+                        Jobless-AI is a fine-tuned Hugging Face model with nothing but time and purpose — to help you land a job in tech.
+                        Trained on a rich mix of job descriptions and resumes. it intelligently scrapes LinkedIn, hr.ge, and other job platforms to hunt down
+                        the roles that actually fit you.
+                        " }
+                    </p>
+                </li>
+
+
+                <li style="margin-bottom: 1rem;">
                     <a href="https://github.com/Ka10ken1/NP-final" target="_blank" rel="noopener noreferrer" style="
                         color: #00ff88;
                         font-weight: 600;
@@ -351,21 +369,6 @@ pub fn body(props: &BodyProps) -> Html {
             </ul>
             }, *dark_mode)}
 
-            { section_with_id(String::from("technologies"), "Technologies & Tools", html! {
-            <div style="display: flex; justify-content: center; align-items: center; padding: 1rem 0;">
-                <img
-                    src="https://skillicons.dev/icons?i=rust,java,python,cpp,javascript,typescript,lua,mysql,postgres,linux,docker,git,latex"
-                    alt="Technologies and Tools"
-                    class="tech-icons"
-                    style="
-                        max-width: 100%;
-                        height: auto;
-                        border-radius: 10px;
-                        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-                        "
-                />
-            </div>
-            }, *dark_mode)}
 
         </div>
 
